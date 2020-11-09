@@ -7,6 +7,7 @@ let show_text = (check) => {
 }
 
 let createGrid = (meals) => {
+    results_container.innerHTML = "";
     meals.forEach( element => {
         let img_container = document.createElement("div");
         let image = document.createElement("img");
