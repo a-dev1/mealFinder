@@ -28,9 +28,18 @@ body {
 }
 
 h2,
-p {
+p,
+h3 {
     margin: 20px;
     color: #fff;
+}
+
+.rc-container {
+    border: 4px dashed #66411d;
+    margin: 20px;
+    padding: 30px 100px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .found-or-not {
@@ -56,7 +65,7 @@ p {
 }
 
 .detail-container img {
-    width: 300px;
+    min-width: 300px;
     height: 300px;
     border: 5px solid #fff;
 }
@@ -117,5 +126,32 @@ p {
         height: 280px;
     }
 } 
+
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    max-width: 500px;
+    min-width: 500px;
+}
+
+.ingredients-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+div span{
+    color: #2d2013;
+    background-color:  #fff;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 4px;
+    font-size: 15px;
+}
 
 

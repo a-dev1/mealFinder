@@ -16,7 +16,7 @@ let showDetails = (element) => {
     let rc_container = document.createElement("div");
     let instructions = document.createElement("p");
     let ingredients_head = document.createElement("h2");
-    let ingredients_container = document.createElement("p"); 
+    let ingredients_container = document.createElement("div"); 
 
     heading.innerText = element.strMeal;
     heading.classList.add("heading");
@@ -25,6 +25,7 @@ let showDetails = (element) => {
     region.innerText = element.strArea;
     rc_container.appendChild(category);
     rc_container.appendChild(region);
+    rc_container.classList.add("rc-container");
     instructions.innerText = element.strInstructions;
     ingredients_head.innerText = "Ingredients";
 
@@ -33,10 +34,16 @@ let showDetails = (element) => {
     details_container.appendChild(rc_container);
     details_container.appendChild(instructions);
     details_container.appendChild(ingredients_head);
+    ingredients_container.classList.add("ingredients-container");
 
-    // for(let i=1; i<=20; i++){
-    //     if(strIngredient)
-    // }
+    for(let i=1; i<=20; i++){
+        if(eval(`element.strIngredient${i}`)){
+            let ingredient = document.createElement("span");
+            ingredient.innerText = eval(`element.strIngredient${i}`) + '-' + eval(`element.strMeasure${i}`);
+            ingredients_container.appendChild(ingredient);
+        }
+        details_container.appendChild(ingredients_container);
+    }
 }
 
 let createGrid = (meals) => {
