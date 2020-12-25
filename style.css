@@ -92,7 +92,7 @@ h3 {
 }
 
 .meal_info:hover {
-     opacity: 1;
+    opacity: 1;
 }
 
 .results-container {
@@ -106,14 +106,16 @@ h3 {
         grid-template-columns: repeat(3, 180px);
     }
 }
+
 @media screen and (max-width: 700px) {
     .results-container {
         grid-template-columns: repeat(2, 180px);
     }
+
     .img_container {
         width: 180px;
         height: 180px;
-    } 
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -121,13 +123,14 @@ h3 {
     .results-container {
         grid-template-columns: repeat(1, 280px);
     }
+
     .img_container {
         width: 280px;
         height: 280px;
     }
-} 
+}
 
-.detail-container{
+.detail-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,13 +148,11 @@ h3 {
     margin-bottom: 40px;
 }
 
-div span{
+div span {
     color: #2d2013;
-    background-color:  #fff;
+    background-color: #fff;
     border-radius: 4px;
     margin: 4px;
     padding: 4px;
     font-size: 15px;
 }
-
-
